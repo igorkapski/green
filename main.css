@@ -37,3 +37,61 @@ button {
     box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
     padding: 15px;
 }
+
+.mycode {
+  height: 100vh;
+  background-image: linear-gradient(to left bottom,rgba(255, 127, 80, 0.52), rgba(192, 192, 192, 0.52) 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: blueviolet;
+  width: 85.6mm;
+  height: 53.98mm;
+  border-radius: 3.18mm;
+  color: #fff;
+  padding: 6mm;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6mm;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+select, input {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid;
+  color: inherit;
+  width: 100%;
+  padding-left: 4px;
+  box-sizing: border-box;
+}
+
+.card>[type="number"] {
+  grid-row-start: 2;
+}
+
+select {
+  grid-column-end: span 2;
+}
+
+[type="text"] {
+  grid-row-start: 3;
+  grid-column-end: span 2;
+}
+
+.card__date {
+  grid-row-start: 3;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  grid-column-end: span 2;
+  gap: 6px;
+}
+
+::placeholder {
+  color: coral;
+}
